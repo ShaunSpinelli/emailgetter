@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Email Getter</title>
+<style>
+    #drop_zone {
+        border: 5px solid blue;
+        width:  200px;
+        height: 100px;
+      }
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+
+</head>
+
+<body>
+  <section style="height: 100%;"class="hero is-fullheight is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+    <h1 class="title">yo</h1>
+    <label for="myfile">Select CSV:</label>
+    <input type="file" id="myfile" name="myfile" onChange="uploadedCsv(event)">
+    <div style="padding-top:2.5em;">
+      <textarea class="textarea" placeholder="emails..." id="emailList"></textarea>
+    </div>
+    <div style="padding-top:1em;">
+      <button onclick="copyToClipBoard()" class="button is-info" id="copyButton" hidden>Copy</button>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+
+    <!-- <div id="drop_zone" ondrop="dropHandler(event);">
+        <p>Drag one or more files to this Drop Zone ...</p>
+      </div> -->
+  <script src="src/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.2.0/papaparse.min.js"></script>
+</body>
+</html>
